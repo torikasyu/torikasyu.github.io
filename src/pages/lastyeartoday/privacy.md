@@ -77,9 +77,17 @@ layout: ../../layouts/Layout.astro
 
 ## お問い合わせ
 
-本プライバシーポリシーに関するご質問やご意見がございましたら、Xのアカウントまでお問い合わせください
-https://x.com/torikasyu/
+本プライバシーポリシーに関するご質問やご意見がございましたら、メールにてお問い合わせください
+<span id="support-email">メールアドレスを表示中...</span>
 
+<script>
+  const parts = ['tanaka', '.', 'hiroki', '@', 'gmail', '.', 'com'];
+  const email = parts.join('');
+  const element = document.getElementById('support-email');
+  if (element) {
+    element.innerHTML = `<a href="mailto:${email}?subject=十年スナップについて">${email}</a>`;
+  }
+</script>
 ---
 
 © 2025 torikasyu. All rights reserved.
